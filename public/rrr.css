@@ -1,0 +1,128 @@
+body {
+    font-family: 'Nunito Sans', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+/* НАЧАЛО  ЕЖЕДНЕВНИК ЕЖЕНЕДЕЛЬНИК  */
+
+.weekly-planner {
+    display: grid ;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(24, 226, 17, 0.301);
+    border-radius: 150px;
+    box-shadow: 0 0 10px rgba(20, 211, 52, 0.397);
+    text-align: center;
+    border: 1px solid rgb(14, 192, 103);            
+    background-color: #2196F3;
+    transition: background-color 1s linear;
+       
+  }
+  .weekdays :hover {
+   background-color: #4fdd0d6b;
+   border-radius: 50px;
+  }
+  .day {
+    padding: 10px;
+    border: 1px solid rgb(14, 192, 103);
+    border-radius: 15px;
+    filter: drop-shadow(0 0 20px rgba(14, 192, 103, 0.75));
+  
+  }
+  
+  .events {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+  .events:hover{
+      transition: width 1s cubic-bezier(0, 0, 1, 1) 500ms;    
+      width: 230px;
+  }
+  h1 {
+    grid-column: 1 / -1;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(28, 187, 49, 0.774);
+    filter: drop-shadow(0 0  50px  white );
+  }
+  .weekly-planner {
+    background-color: rgba(54, 170, 18, 0.103);
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    
+  }
+  .weekly-planner:hover {
+    transition: width 1s cubic-bezier(0, 0, 1, 1) 500ms;    
+  width: 1000px;
+  }
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    font-size: 16px;
+    animation: bounce-in 0.5s;
+  }
+  
+  .day:hover {
+    transition: font-size 3s;
+    transition: width 1s cubic-bezier(0, 0, 1, 1) 500ms;    
+  width: 230px; 
+  }
+.weekly-planner {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.events {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.weekly-planner {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    margin-left: 4%;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+}

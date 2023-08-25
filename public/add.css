@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+
+/* Basic Style */
+body {
+  font-size: 20px; /* Размер по умолчанию при 100% масштабе */
+  background: #000000;
+  font-family: 'Nunito Sans', monospace;
+  padding: 3rem;
+  text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(53, 51, 51, 0) 0%,
+      rgb(34, 34, 34, 0) 100%
+    ),
+    url(photo_2023-08-14_11-17-47.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  /* margin-bottom: 50px; */
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1em;
+}
+/* Стили для контейнера */
+.cal_graph {
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  height: auto;
+  width: auto;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  position: relative;
+  padding: 1.5vh;
+  text-align: center;
+  height: auto;
+}
+
+#myChart {
+  width: 50%; /* Занимает всю ширину контейнера */
+  height: auto; /* Высота автоматически регулируется в зависимости от ширины */
+  display: block;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', monospace;
+  font-size: 2vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 80px;
+  
+}
+
+.task-container {
+  /* flex: 1; */
+  background: rgb(255, 255, 255, 0.75);
+  display: block;
+  width: auto;
+  border-radius: 50px;
+}
+
+
+
+ul {
+  margin: 0;
+  padding: 30px;
+}
+li * {
+  float: left ;
+}
+li, h3 {
+  clear:both;
+  list-style: upper-roman ;
+}
+input, button {
+  outline: none;
+}
+button {
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2vh;
+  margin: 0.9vh 0;
+  margin-right: 0.9vh;
+  cursor: pointer;
+  width: 100px;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+button:hover {
+  color: #333;
+}
+/* Heading */
+h3,
+label[for='new-task'] {
+  color: #333;
+  font-weight: 600;
+  font-size: 3vh;
+  border-bottom: 2px solid rgb(28, 187, 49, 0.774);
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.task-selinpbut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vh;
+}
+input[type="text"] {
+  font-size: 2.5vh;
+  line-height: 30px;
+  height: 20px;
+  margin: 0.9vh 0;
+  margin-right: 0.9vh;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: 'Nunito Sans', sans-serif;
+  float: left;
+  display: flex;
+  flex: 1;
+}
+input[type="text"]:focus {
+  outline-color: rgb(137, 139, 139, 0.423);
+  box-shadow: -3px -3px 15px hsla(124, 100%, 50%, 0.551);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+/* New Task */
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+  color: rgb(0, 0, 0);
+  font-size: 3vh;
+}
+input#new-task {
+  width: auto;
+  color: rgb(0, 0, 0);
+  font-size: 2.5vh;
+}
+p > button:hover {
+  color: rgb(28, 187, 49, 0.774);
+}
+ #TaskForm {
+  width: 50%;
+ }
+
+ .other-container {
+  width: 50%;
+ }
+
+
+.task-container li {
+  display: fixed;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+  font-size: 2.5vh;
+  font-weight: 600;
+}
+li > input[type="checkbox"] {
+  margin: 5px 10px;
+}
+li > label {
+  line-height: 40px;
+  width: 30vh;
+  padding: 0 0 0 11px;
+  font-weight: 500;
+}
+#date-time {
+  order: 2; /* Меняем порядок элемента для перемещения на новую строку */
+  /* background-color: #CF2323; */
+}
+li >  input[type="text"] {
+  width: 226px;
+  font-weight: 500;
+}
+li > .delete:hover {
+  color: #CF2323;
+}
+
+.button-task {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+  font-size: medium;
+  /* background: rgb(136, 133, 133, 0.15); */
+  border-radius: 6px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  margin: 5px 2px;
+  font-weight: 500;
+}
+
+#incomplete-tasks label {
+  font-size: medium;
+  border-radius: 6px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  margin: 5px 2px;
+  display: block; /* Добавлено для вертикального расположения лейблов */
+
+}
+
+
+/* Edit Task */
+ul li input[type=text] {
+  
+  display:none;
+
+  color: rgb(0, 0, 0);
+}
+
+ul li.editMode input[type=text] {
+  display:block;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+ul li.editMode label {
+  display:none;
+  background: #fff;
+  border-radius: 6px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 2.5vh;
+  width: 200px;
+  margin: 0.9vh 1vh;
+  float: left;
+}
+
+/* Стилизуем стрелку внутри select */
+select::after {
+  content: "\25BC"; /* Unicode символ для стрелки вниз */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* Стили для активного состояния select */
+select:focus {
+  color: #333;
+  outline: none;
+  border-color: rgb(28, 187, 49, 0.774);
+}
+
+/* Стили для поля ввода времени */
+input[type="datetime-local"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 200px;
+}
+
+/* Стили для активного состояния поля ввода времени */
+input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: rgb(28, 187, 49, 0.774);
+}
+
+.with-padding {
+  padding-left: 100px; /* или любое другое значение */
+}
+
+
+/* КАЛЕНДАРЬ */
+
+:root {
+    
+  --light-body: #e6e7e9;
+  --light-main: #f1eded;
+  --light-second: #a6a6a6;
+  --light-hover: #edf0f5;
+  --light-text: rgb(2, 17, 4);
+
+  --blue: rgb(28, 187, 49);
+  --white: #fff;
+
+  --shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  --font-family: cursive;
+}
+
+
+.calendar {
+  width: auto;
+  height: auto;
+  background-color: rgb(255, 255, 255,0.75);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  --bg-body: var(--light-body);
+  --bg-main: var(--light-main);
+  --bg-second: var(--light-second);
+  --color-hover: var(--light-hover);
+  --color-txt: var(--light-text);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 5px;
+}
+
+
+.calendar-header {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3vh;
+  color: var(--color-txt);
+  padding: 1vh;
+  font-weight: 600;
+}
+
+.calendar-body {
+  /* padding: 5px; */
+  font-size: 3vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.calendar-week-day {
+  /* height: 10px; */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 2.5vh;
+  text-align: center;
+ 
+}
+
+.calendar-week-day div {
+  display: grid;
+  place-items: center;
+  color: var(--bg-second);
+  margin-bottom: 0.5vh;
+}
+
+.calendar-days {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1vh; 
+  /* gap: 18px; */
+  color: var(--color-txt);
+  position: relative;
+  text-align: center;
+  place-items: center;
+}
+
+.calendar-days div {
+  font-size: 2vh;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+  position: relative;
+  cursor: pointer;
+  animation: to-top 1s forwards;
+
+}
+
+.calendar-days div span {
+  position: absolute;
+}
+
+.calendar-days div:hover span {
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.calendar-days div span:nth-child(1),
+.calendar-days div span:nth-child(3) {
+  width: 2px;
+  height: 0;
+  background-color: var(--color-txt);
+}
+
+.calendar-days div:hover span:nth-child(1),
+.calendar-days div:hover span:nth-child(3) {
+  height: 100%;
+}
+
+.calendar-days div span:nth-child(1) {
+  bottom: 0;
+  left: 0;
+}
+
+.calendar-days div span:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+
+.calendar-days div span:nth-child(2),
+.calendar-days div span:nth-child(4) {
+  width: 0;
+  height: 2px;
+  background-color: var(--color-txt);
+}
+
+.calendar-days div:hover span:nth-child(2),
+.calendar-days div:hover span:nth-child(4) {
+  width: 100%;
+}
+
+.calendar-days div span:nth-child(2) {
+  top: 0;
+  left: 0;
+}
+
+.calendar-days div span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+.calendar-days div:hover span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.calendar-days div:hover span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.calendar-days div:hover span:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+.calendar-days div.curr-date,
+.calendar-days div.curr-date:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 50%;
+}
+
+.calendar-days div.curr-date span {
+  display: none;
+}
+
+.month-picker {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.month-picker:hover {
+  background-color: var(--color-hover);
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.year-change {
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.year-change:hover {
+  background-color: var(--color-hover);
+}
+
+
+.month-list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-main);
+  border-radius: 30px;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  display: grid;
+  transform: scale(1.5);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.month-list.show {
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: visible;
+  transition: all 0.2s ease-in-out;
+}
+
+.month-list > div {
+  display: grid;
+  place-items: center;
+}
+
+.month-list > div > div {
+  width: 100%;
+  padding: 0.9vh 0.15vh;
+  font-size: 2vh;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-txt);
+}
+
+.month-list > div > div:hover {
+  background-color: var(--color-hover);
+}
+
+@keyframes to-top {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.selected-day{
+  background-color:  rgb(18, 192, 186);
+  color: var(--white);
+  border-radius: 50%;
+}

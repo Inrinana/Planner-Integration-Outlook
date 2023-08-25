@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>	
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <title>Планер ИВЦ ИНФОРМ </title>
+    <link rel="stylesheet" href="add.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="nav.css" type="text/css" media="screen" charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script  type="module" src="menu.js"></script>
+  </head>
+  <body>
+  <div class="display">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="https://outlook.live.com/mail/0/">
+                        <div class="icon"><ion-icon name="chatbox-outline"></ion-icon></div>
+                        <span class="title">Outlook</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <div class="icon"><ion-icon name="help-circle-outline"></ion-icon></div>
+                        <span class="title">Помощь</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a>
+                        <div class="icon exit"><ion-icon name="log-out-outline"></ion-icon></div>
+                        <span class="title">Выйти</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="toggle">
+            <ion-icon name="grid-outline" class="open"></ion-icon>
+            <ion-icon name="close-circle-outline" class="close"></ion-icon>   
+        </div>
+    </div>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+            <span class="closes">&times;</span>
+            <h2>Инструкция</h2>
+            <p>Ваш текст инструкции здесь...</p>
+            </div>
+        </div>
+    <div class ='blur'>
+    <h1>Здравствуйте, {{userName}}</h1>
+    <h2> ИВЦ ИНФОРМ<br>📩Непрочитанных сообщений: {{unreadItemCount}} </h2>
+
+    <link rel="stylesheet" href="rrr.css">
+
+    <div class="cal_graph">
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">Февраль</span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">←</span>
+                    <span id="year">2021</span>
+                    <span class="year-change" id="next-year">→</span>
+                </div>
+            </div>
+            
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>ПН</div>
+                    <div>ВТ</div>
+                    <div>СР</div>
+                    <div>ЧТ</div>
+                    <div>ПТ</div>
+                    <div>СБ</div>
+                    <div>ВС</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+            <div class="month-list"></div>
+           <script src="app.js"></script> 
+        </div>
+
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+<div class="container">
+	<div id="TaskForm">
+		<div class="task-container" id ='mail'>
+      <p>
+        <label for="new-task">Добавить событие</label>
+      </p>
+      <div class="task-selinpbut">
+      <select id="taskCategory" name="taskCategory">
+        <option value="Личное">Личное</option>
+        <option value="Рабочее">Рабочее</option>
+        <option value="Встреча">Встреча</option>
+        <option value="Другое">Другое</option>
+      </select>
+      <input id="new-task" type="text" name="taskname" placeholder="Напишите событие">
+      <button id="button"><span>Добавить</span></button>
+    </div>
+      <div id="meetingTime" style="display: none;">
+        <label for="time">Время встречи:</label>
+        <input type="datetime-local" id="start" name="trip-start" placeholder="Введите время" min="2023-08-15T00:00" max="2028-08-15T00:00"/>
+      </div>
+
+          
+            <h3>Необходимо выполнить</h3>
+      
+      <ul id="incomplete-tasks">
+        {{#each finalrows}}
+          {{#if this.date_end}}
+          <li class={{this.pln_type}}>
+            <p>{{this.pln_type}}</p>
+            <label>{{this.pln_title}}</label>
+            <input type="text" value={{this.pln_title}} id={{this.ins_id}} name ='task'>
+            <input type="hidden" name="tasktype" value={{this.pln_type}}>
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+            <label>{{dateFormat this.date_end "YYYY-MM-DD HH:mm"}}</label>
+            <input type="text" value="{{dateFormat this.date_end "YYYY-MM-DD HH:mm"}}" name = 'dateofend'>
+            </li>
+          {{else}}
+        <li class={{this.pln_type}}>
+            <p>{{this.pln_type}}</p>
+            <input type="checkbox">
+            <label>{{this.pln_title}}</label>
+            <input type="text" value={{this.pln_title}} id={{this.ins_id}} name ='task'>
+            <input type="hidden" name="tasktype" value={{this.pln_type}}>
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+        {{/if}}
+      {{/each}}
+      </ul>
+
+      <h3>Завершено</h3>
+      <ul id="completed-tasks">
+      </ul>
+      </div>
+      </div>
+  <script type="text/javascript" src="add.js"></script>
+  <div class="other-container">
+         <div class="weekly-planner">
+        <h1>Еженедельник</h1>
+        <div class="weekdays">
+            <div class="day" id = '0'>Пн</div>
+            <div class="day" id = '1'>Вт</div>
+            <div class="day" id = '2'>Ср</div>
+            <div class="day" id = '3'>Чт</div>
+            <div class="day" id = '4'>Пт</div>
+            <div class="day" id = '5'>Сб</div>
+            <div class="day" id = '6'>Вс</div>
+        </div>
+        
+    </div>
+        
+    </div>
+  </div>
+<script>
+  const taskCategorySelect = document.getElementById("taskCategory");
+  const meetingTimeDiv = document.getElementById("meetingTime");
+
+  taskCategorySelect.addEventListener("change", function() {
+    if (taskCategorySelect.value === "Встреча") {
+      meetingTimeDiv.style.display = "block";
+    } else {
+      meetingTimeDiv.style.display = "none";
+    }
+  });
+</script>
+    </div>
+    </body>
+</html>
