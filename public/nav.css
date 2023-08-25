@@ -213,3 +213,29 @@
     width: 100%;
     backdrop-filter: blur(5px);
   }
+.modal-content ul {
+    text-align: left;
+    padding-left: 0; /* Сбрасываем отступ слева у списка */
+}
+
+/* Замена римских цифр на точки */
+.modal-content ul li {
+    margin-left: 10px;
+    list-style-type: disc;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 0.5em;
+    opacity: 0; /* Изначально скрываем скроллбар */
+    transition: opacity 0.3s ease; /* Плавное появление */
+}
+
+.modal-content:hover::-webkit-scrollbar {
+    opacity: 1; /* Показываем скроллбар при наведении */
+}
+
+/* Стилизация ползунка скроллбара */
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
